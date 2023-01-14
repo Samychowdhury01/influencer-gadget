@@ -97,12 +97,8 @@ Journey Section styles
 }
 
 .image-container{
-    position: relative;
-}
-#camera{
-    position: absolute;
-    top: 20px;
-    
+   background-image: url(images/Circle\ design.svg);
+   background-size: cover;
 }
 
 /*-------------------
@@ -191,15 +187,17 @@ card section styles
 join-section
 ------------------- */
 .join-section{
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
     display: flex;
     gap: 96px;
     align-items: center;
     margin: 0 auto 100px;
-   
-
-    border: 1px solid red;
 }
+
+/*----------------- 
+footer section
+------------------- */
 
 footer{
     background-color: #0A0826;
@@ -216,3 +214,34 @@ footer p{
     margin-top: 16px;
     margin-right: 16px;
 }
+
+
+/* Media Query */
+@media only screen and (max-width: 576px) {
+    body{
+        padding-left: 20px;
+    }
+    .nav-container{
+        width: 100%;
+        padding: 80px 30px;
+    }
+    .bar{
+        display: flex;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    .card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .join-section{
+        flex-direction: column;
+        padding: 10px;
+        overflow: hidden;
+    }
+    }
+   
